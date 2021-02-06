@@ -1,0 +1,539 @@
+
+The Name Attribute for <input>:
+Notice that each input field must have a name attribute to be submitted.
+
+If the name attribute is omitted, the value of the input field will not be sent at all.
+
+Attributes::
+The Action Attribute:
+
+The action attribute defines the action to be performed when the form is submitted.
+
+Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+
+
+eg3:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form  action="https://www.google.com/">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+
+The Target Attribute:
+
+The target attribute specifies where to display the response that is received after submitting the form.
+
+Value	Description:
+
+_blank	The response is displayed in a new window or tab
+_self	The response is displayed in the current window
+
+eg4:
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form  action="https://www.google.com/" target="_blank">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+
+
+
+The Method Attribute:
+
+The method attribute specifies the HTTP method to be used when submitting the form data.
+
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+
+The default HTTP method when submitting form data is GET. 
+
+GET:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form  action="https://www.google.com/" method="get">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+
+Notes on GET:
+
+Appends the form data to the URL, in name/value pairs
+NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+The length of a URL is limited (2048 characters)
+
+GET is good for non-secure data
+
+Post:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form  action="https://www.google.com/" method="post">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
+
+
+Notes on POST:
+
+Appends the form data inside the body of the HTTP request 
+(the submitted form data is not shown in the URL)
+POST has no size limitations, and can be used to send large amounts of data.
+
+
+The Autocomplete Attribute:
+The autocomplete attribute specifies whether a form should have autocomplete on or off.
+
+When autocomplete is on, the browser automatically 
+complete values based on values that the user has entered before.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The form autocomplete attribute</h1>
+
+<p>Fill in and submit the form, then reload the page, start to fill 
+in the form again - and see how autocomplete works.</p>
+
+<p>Then, try to set autocomplete to "off".</p>
+
+<form action="https://www.google.com/" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+
+The HTML <form> Elements:
+
+The <input> Element
+One of the most used form element is the <input> element.
+
+The <input> element can be displayed in several ways, depending on the type attribute.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The input Element</h2>
+
+<form action="https://www.google.com/">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+
+
+The <label> Element
+The <label> element defines a label for several form elements.
+
+
+The for attribute of the <label> tag should be equal to the id attribute
+ of the <input> element to bind them together.
+
+
+
+
+Select:
+
+The <option> elements defines an option that can be selected.
+
+By default, the first item in the drop-down list is selected.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The select Element</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form action="https://www.google.com/">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+eg2:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pre-selected Option</h2>
+
+<p>You can preselect an option with the selected attribute:</p>
+
+<form action="https://www.google.com/">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat" selected>Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+
+
+Allow Multiple Selections:
+Use the multiple attribute to allow the user to select more than one value:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Allow Multiple Seletcions</h2>
+
+<p>Use the multiple attribute to allow the user to select more than one value.</p>
+
+<form action="https://www.google.com/">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+
+</body>
+</html>
+
+
+The <textarea> Element:
+The <textarea> element defines a multi-line input field (a text area):
+
+The rows attribute specifies the visible number of lines in a text area.
+
+The cols attribute specifies the visible width of a text area.
+
+
+
+eg:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Textarea</h2>
+<p>The textarea element defines a multi-line input field.</p>
+
+<form action="https://www.google.com/">
+  <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+styles:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Styling Textarea</h2>
+
+<p>Use CSS to change the size of the textarea:</p>
+
+<form action="https://www.google.com/">
+  <textarea name="message" style="width:200px; height:600px;">The cat was playing in the garden.</textarea>
+  <br>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+
+fieldset:
+
+The <fieldset> and <legend> Elements
+The <fieldset> element is used to group related data in a form.
+
+The <legend> element defines a caption for the <fieldset> element.
+
+Eg1:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Grouping Form Data with Fieldset</h2>
+
+<p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+
+<form action="https://www.google.com/">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+</body>
+</html>
+
+
+The <datalist> Element:
+
+The <datalist> element specifies a list of pre-defined options for an <input> element.
+
+Users will see a drop-down list of the pre-defined options as they input data.
+
+The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+
+
+difference b/w select and datalist:
+ For the select element, the user is required to select one of the options you've given.
+ For the datalist element, it is suggested that the user select one of the options you've given,
+ but he can actually enter anything he wants in the input.
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The datalist Element</h2>
+
+<p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+<form action="https://www.google.com/">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+<p><b>Note:</b> The datalist tag is not supported in Safari prior version 12.1.</p>
+
+</body>
+</html>
+
+
+Input types:
+
+text
+password
+ eg:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Password field</h2>
+
+<p>The <strong>input type="password"</strong> defines a password field:</p>
+
+<form action="/action_page.php">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>The characters in a password field are masked .</p>
+
+</body>
+</html>
+
+
+Reset:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Reset Button</h2>
+
+<p>The <strong>input type="reset"</strong> defines a reset button that resets all form values to their default values:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" ><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" ><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form> 
+
+<p>If you change the input values and then click the "Reset" button, the form-data will be reset to the default values.</p>
+
+</body>
+</html>
+
+
+input type: color:
+
+eg:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Show a Color Picker</h2>
+
+<p>The <strong>input type="color"</strong> is used for input fields that should contain a color.</p>
+
+<form action="/action_page.php">
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="Submit">
+</form>
+
+<p><b>Note:</b> type="color" is not supported in Internet Explorer 11 or Safari 9.1 (or earlier).</p>
+
+</body>
+</html>
+
+
+
+Input Type Date:
+
+The <input type="date"> is used for input fields that should contain a date.
+
+Depending on browser support, a date picker can show up in the input field.
+eg:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Date Field</h2>
+
+<p>The <strong>input type="date"</strong> is used for input fields that should contain a date.</p>
+
+<form action="/action_page.php">
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit" value="Submit">
+</form>
+
+<p><strong>Note:</strong> type="date" is not supported in Safari or Internet Explorer 11 (or earlier).</p>
+
+</body>
+</html>
+
+
+
+min and max:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Date Field Restrictions</h2>
+
+<p>Use the min and max attributes to add restrictions to dates:</p>
+
+<form action="/action_page.php">
+  <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1980-12-31"><br><br>
+
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<p><strong>Note:</strong> type="date" is not supported in Safari or Internet Explorer 11 (or earlier).</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
